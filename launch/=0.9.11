@@ -1,0 +1,7 @@
+Requirement already satisfied: rosbags in /home/claydergc/mambaforge/lib/python3.10/site-packages (0.10.4)
+Requirement already satisfied: lz4 in /home/claydergc/mambaforge/lib/python3.10/site-packages (from rosbags) (4.3.3)
+Requirement already satisfied: numpy in /home/claydergc/mambaforge/lib/python3.10/site-packages (from rosbags) (1.26.4)
+Requirement already satisfied: ruamel.yaml in /home/claydergc/mambaforge/lib/python3.10/site-packages (from rosbags) (0.18.6)
+Requirement already satisfied: typing-extensions in /home/claydergc/mambaforge/lib/python3.10/site-packages (from rosbags) (4.12.1)
+Requirement already satisfied: zstandard in /home/claydergc/mambaforge/lib/python3.10/site-packages (from rosbags) (0.22.0)
+Requirement already satisfied: ruamel.yaml.clib>=0.2.7 in /home/claydergc/mambaforge/lib/python3.10/site-packages (from ruamel.yaml->rosbags) (0.2.8)

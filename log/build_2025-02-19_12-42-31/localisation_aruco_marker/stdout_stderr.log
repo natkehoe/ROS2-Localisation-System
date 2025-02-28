@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "C:\Users\nhkje\AppData\Local\Programs\Python\Python313\Lib\site-packages\colcon_core\executor\__init__.py", line 91, in __call__
+    rc = await self.task(*args, **kwargs)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nhkje\AppData\Local\Programs\Python\Python313\Lib\site-packages\colcon_core\task\__init__.py", line 93, in __call__
+    return await task_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nhkje\AppData\Local\Programs\Python\Python313\Lib\site-packages\colcon_ros\task\ament_cmake\build.py", line 59, in build
+    rc = await extension.build(
+         ^^^^^^^^^^^^^^^^^^^^^^
+        skip_hook_creation=False,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        environment_callback=add_app_to_cpp)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nhkje\AppData\Local\Programs\Python\Python313\Lib\site-packages\colcon_cmake\task\cmake\build.py", line 87, in build
+    rc = await self._reconfigure(args, env)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nhkje\AppData\Local\Programs\Python\Python313\Lib\site-packages\colcon_cmake\task\cmake\build.py", line 151, in _reconfigure
+    raise RuntimeError(
+        'VisualStudioVersion is not set, '
+        'please run within a Visual Studio Command Prompt.')
+RuntimeError: VisualStudioVersion is not set, please run within a Visual Studio Command Prompt.
