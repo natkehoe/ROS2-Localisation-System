@@ -1,6 +1,18 @@
 from launch import LaunchDescription
 from launch_ros.actions import Node
 
+'''
+This launch file is used to broadcast the static transform between the world frame and the checkerboard_marker frame,
+the checkerboard_marker frame and the checkerboard frame, the checkerboard frame and the camera frame, and the marker_frame
+frame and the base_link frame. 
+
+The transform between the world frame and the checkerboard_marker frame is obtained from the
+OptiTrack system. The transform between the checkerboard_marker frame and the checkerboard frame is obtained from the
+calibration process. The transform between the checkerboard frame and the camera frame is obtained from the calibration
+process. The transform between the marker_frame frame and the base_link frame is obtained from the calibration process.
+
+'''
+
 def generate_launch_description():
     return LaunchDescription([
         Node(

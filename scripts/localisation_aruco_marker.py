@@ -2,7 +2,7 @@
 import numpy as np
 import cv2
 import cv2.aruco as aruco
-import rclpy
+import rclpy # create ROS2 node
 from rclpy.node import Node
 from tf_transformations import quaternion_from_matrix
 from geometry_msgs.msg import PoseStamped
