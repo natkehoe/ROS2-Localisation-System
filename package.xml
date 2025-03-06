@@ -3,7 +3,7 @@
 <package format="3">
   <name>localisation_aruco_marker</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>TODO: Configure for ROS2 implementation</description>
   <maintainer email="claydergc@gmail.com">claydergc</maintainer>
   <license>Apache-2.0</license>
 
