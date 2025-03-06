@@ -67,7 +67,7 @@ ament_python_install_package(${PROJECT_NAME})
 # Add this section to install Python scripts
 install(
   PROGRAMS
-  ROS2-Localisation-System/localisation_aruco_marker.py # point to python script location
+  localisation_aruco_marker/localisation_aruco_marker.py # point to python script location
   DESTINATION lib/${PROJECT_NAME}
 )
 
