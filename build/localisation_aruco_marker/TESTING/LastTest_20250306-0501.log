@@ -1,0 +1,470 @@
+Start testing: Mar 06 15:01 AEST
+----------------------------------------------------------
+1/6 Testing: cppcheck
+1/6 Test: cppcheck
+Command: "/usr/bin/python3" "-u" "/opt/ros/rolling/share/ament_cmake_test/cmake/run_test.py" "/home/raspi11031808/Desktop/ros2_ws/build/localisation_aruco_marker/test_results/localisation_aruco_marker/cppcheck.xunit.xml" "--package-name" "localisation_aruco_marker" "--output-file" "/home/raspi11031808/Desktop/ros2_ws/build/localisation_aruco_marker/ament_cppcheck/cppcheck.txt" "--command" "/opt/ros/rolling/bin/ament_cppcheck" "--xunit-file" "/home/raspi11031808/Desktop/ros2_ws/build/localisation_aruco_marker/test_results/localisation_aruco_marker/cppcheck.xunit.xml" "--include_dirs" "/home/raspi11031808/Desktop/ros2_ws/src/ROS2-Localisation-System/include"
+Directory: /home/raspi11031808/Desktop/ros2_ws/src/ROS2-Localisation-System
+"cppcheck" start time: Mar 06 15:01 AEST
+Output:
+----------------------------------------------------------
+-- run_test.py: invoking following command in '/home/raspi11031808/Desktop/ros2_ws/src/ROS2-Localisation-System':
+ - /opt/ros/rolling/bin/ament_cppcheck --xunit-file /home/raspi11031808/Desktop/ros2_ws/build/localisation_aruco_marker/test_results/localisation_aruco_marker/cppcheck.xunit.xml --include_dirs /home/raspi11031808/Desktop/ros2_ws/src/ROS2-Localisation-System/include
+cppcheck 2.13.0 has known performance issues and therefore will not be used, set the AMENT_CPPCHECK_ALLOW_SLOW_VERSIONS environment variable to override this.
+-- run_test.py: return code 0
+-- run_test.py: verify result file '/home/raspi11031808/Desktop/ros2_ws/build/localisation_aruco_marker/test_results/localisation_aruco_marker/cppcheck.xunit.xml'
+<end of output>
+Test time =   0.32 sec
+----------------------------------------------------------
+Test Passed.
+"cppcheck" end time: Mar 06 15:01 AEST
+"cppcheck" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/6 Testing: flake8
+2/6 Test: flake8
+Command: "/usr/bin/python3" "-u" "/opt/ros/rolling/share/ament_cmake_test/cmake/run_test.py" "/home/raspi11031808/Desktop/ros2_ws/build/localisation_aruco_marker/test_results/localisation_aruco_marker/flake8.xunit.xml" "--package-name" "localisation_aruco_marker" "--output-file" "/home/raspi11031808/Desktop/ros2_ws/build/localisation_aruco_marker/ament_flake8/flake8.txt" "--command" "/opt/ros/rolling/bin/ament_flake8" "--xunit-file" "/home/raspi11031808/Desktop/ros2_ws/build/localisation_aruco_marker/test_results/localisation_aruco_marker/flake8.xunit.xml"
+Directory: /home/raspi11031808/Desktop/ros2_ws/src/ROS2-Localisation-System
+"flake8" start time: Mar 06 15:01 AEST
+Output:
+----------------------------------------------------------
+-- run_test.py: invoking following command in '/home/raspi11031808/Desktop/ros2_ws/src/ROS2-Localisation-System':
+ - /opt/ros/rolling/bin/ament_flake8 --xunit-file /home/raspi11031808/Desktop/ros2_ws/build/localisation_aruco_marker/test_results/localisation_aruco_marker/flake8.xunit.xml
+'''
+This launch file is used to broadcast the static transform between the world frame and the checkerboard_marker frame,
+the checkerboard_marker frame and the checkerboard frame, the checkerboard frame and the camera frame, and the marker_frame
+frame and the base_link frame. 
+
+The transform between the world frame and the checkerboard_marker frame is obtained from the
+OptiTrack system. The transform between the checkerboard_marker frame and the checkerboard frame is obtained from the
+calibration process. The transform between the checkerboard frame and the camera frame is obtained from the calibration
+process. The transform between the marker_frame frame and the base_link frame is obtained from the calibration process.
+
+'''
+^
+'''
+This launch file is used to broadcast the static transform between the world frame and the checkerboard_marker frame,
+the checkerboard_marker frame and the checkerboard frame, the checkerboard frame and the camera frame, and the marker_frame
+frame and the base_link frame. 
+
+The transform between the world frame and the checkerboard_marker frame is obtained from the
+OptiTrack system. The transform between the checkerboard_marker frame and the checkerboard frame is obtained from the
+calibration process. The transform between the checkerboard frame and the camera frame is obtained from the calibration
+process. The transform between the marker_frame frame and the base_link frame is obtained from the calibration process.
+
+'''
+   
+                                                                                               ^
+'''
+This launch file is used to broadcast the static transform between the world frame and the checkerboard_marker frame,
+the checkerboard_marker frame and the checkerboard frame, the checkerboard frame and the camera frame, and the marker_frame
+frame and the base_link frame. 
+
+The transform between the world frame and the checkerboard_marker frame is obtained from the
+OptiTrack system. The transform between the checkerboard_marker frame and the checkerboard frame is obtained from the
+calibration process. The transform between the checkerboard frame and the camera frame is obtained from the calibration
+process. The transform between the marker_frame frame and the base_link frame is obtained from the calibration process.
+
+'''
+   
+                                                                                               ^
+'''
+This launch file is used to broadcast the static transform between the world frame and the checkerboard_marker frame,
+the checkerboard_marker frame and the checkerboard frame, the checkerboard frame and the camera frame, and the marker_frame
+frame and the base_link frame. 
+
+The transform between the world frame and the checkerboard_marker frame is obtained from the
+OptiTrack system. The transform between the checkerboard_marker frame and the checkerboard frame is obtained from the
+calibration process. The transform between the checkerboard frame and the camera frame is obtained from the calibration
+process. The transform between the marker_frame frame and the base_link frame is obtained from the calibration process.
+
+'''
+   
+                          ^
+'''
+This launch file is used to broadcast the static transform between the world frame and the checkerboard_marker frame,
+the checkerboard_marker frame and the checkerboard frame, the checkerboard frame and the camera frame, and the marker_frame
+frame and the base_link frame. 
+
+The transform between the world frame and the checkerboard_marker frame is obtained from the
+OptiTrack system. The transform between the checkerboard_marker frame and the checkerboard frame is obtained from the
+calibration process. The transform between the checkerboard frame and the camera frame is obtained from the calibration
+process. The transform between the marker_frame frame and the base_link frame is obtained from the calibration process.
+
+'''
+   
+                                                                                               ^
+'''
+This launch file is used to broadcast the static transform between the world frame and the checkerboard_marker frame,
+the checkerboard_marker frame and the checkerboard frame, the checkerboard frame and the camera frame, and the marker_frame
+frame and the base_link frame. 
+
+The transform between the world frame and the checkerboard_marker frame is obtained from the
+OptiTrack system. The transform between the checkerboard_marker frame and the checkerboard frame is obtained from the
+calibration process. The transform between the checkerboard frame and the camera frame is obtained from the calibration
+process. The transform between the marker_frame frame and the base_link frame is obtained from the calibration process.
+
+'''
+   
+                                                                                               ^
+'''
+This launch file is used to broadcast the static transform between the world frame and the checkerboard_marker frame,
+the checkerboard_marker frame and the checkerboard frame, the checkerboard frame and the camera frame, and the marker_frame
+frame and the base_link frame. 
+
+The transform between the world frame and the checkerboard_marker frame is obtained from the
+OptiTrack system. The transform between the checkerboard_marker frame and the checkerboard frame is obtained from the
+calibration process. The transform between the checkerboard frame and the camera frame is obtained from the calibration
+process. The transform between the marker_frame frame and the base_link frame is obtained from the calibration process.
+
+'''
+   
+                                                                                               ^
+def generate_launch_description():
+^
+            #namespace='turtlesim1',
+            ^
+        
+^
+            #namespace='turtlesim1',
+            ^
+        
+^
+            #namespace='turtlesim1',
+            ^
+        
+^
+            #namespace='turtlesim1',
+            ^
+import cv2
+^
+import rclpy # create ROS2 node
+            ^
+from geometry_msgs.msg import PoseStamped
+^
+from cv_bridge import CvBridge
+^
+import tf2_ros
+^
+from tf2_ros import TransformBroadcaster, Buffer, TransformListener
+^
+from tf2_ros.transformations import quaternion_from_matrix
+^
+    [1375.5, 0, 977.4],  
+                       ^
+    [0, 1376.7, 555.5],  
+                       ^
+    [0, 0, 1]   
+             ^
+class MarkerTrackingNode(Node):
+^
+    def __init__(self):
+^
+        
+^
+        
+^
+        
+^
+            self.video_capture = self.bridge.imgmsg_to_cv2(data, "bgr8")
+                                                                 ^
+        except CvBridgeError as e:
+               ^
+            self.get_logger().error(f"Image conversion error: {e}")
+                                    ^
+            _, R, t = cv2.solvePnP(marker_points, c, camera_matrix, dist_coeffs, False, cv2.SOLVEPNP_IPPE_SQUARE)
+                                                                                                   ^
+        
+^
+        
+^
+                
+^
+                
+^
+                t = geometry_msgs.msg.TransformStamped()
+                    ^
+                t.header.frame_id = "camera"
+                                    ^
+                t.child_frame_id = "marker_frame"
+                                   ^
+                
+^
+                    transform_dot = self.tf_buffer.lookup_transform('camera', 'base_link', rclpy.time.Time())
+                                                                                                   ^
+                    transform = self.tf_buffer.lookup_transform('world', 'base_link', rclpy.time.Time())
+                                                                                                   ^
+                    
+^
+                    pose_msg.header.frame_id = "world"
+                                               ^
+                    
+^
+                    pose_msg2.header.frame_id = "camera"
+                                                ^
+                    self.get_logger().warn(f"Transform error: {e}")
+                                           ^
+        
+^
+def main(args=None):
+^
+if __name__ == '__main__':
+^
+
+^
+1     CNL100 Class definition does not have a new line.
+1     E261 at least two spaces before inline comment
+4     E265 block comment should start with '# '
+3     E302 expected 2 blank lines, found 1
+1     E305 expected 2 blank lines after class or function definition, found 1
+8     E501 line too long (117 > 99 characters)
+1     F401 'tf2_ros' imported but unused
+1     F811 redefinition of unused 'quaternion_from_matrix' from line 7
+2     F821 undefined name 'CvBridgeError'
+3     I100 Import statements are in the wrong order. 'import cv2' should be before 'import numpy'
+1     I101 Imported names are in the wrong order. Should be Buffer, TransformBroadcaster, TransformListener
+7     Q000 Double quotes found but single quotes preferred
+1     Q001 Single quote multiline found but double quotes preferred
+4     W291 trailing whitespace
+14    W293 blank line contains whitespace
+1     W391 blank line at end of file
+
+./launch/localisation_aruco_marker.py:4:1: Q001 Single quote multiline found but double quotes preferred
+
+./launch/localisation_aruco_marker.py:5:100: E501 line too long (117 > 99 characters)
+
+./launch/localisation_aruco_marker.py:6:100: E501 line too long (123 > 99 characters)
+
+./launch/localisation_aruco_marker.py:7:31: W291 trailing whitespace
+
+./launch/localisation_aruco_marker.py:10:100: E501 line too long (117 > 99 characters)
+
+./launch/localisation_aruco_marker.py:11:100: E501 line too long (119 > 99 characters)
+
+./launch/localisation_aruco_marker.py:12:100: E501 line too long (119 > 99 characters)
+
+./launch/localisation_aruco_marker.py:16:1: E302 expected 2 blank lines, found 1
+
+./launch/localisation_aruco_marker.py:20:13: E265 block comment should start with '# '
+
+./launch/localisation_aruco_marker.py:35:1: W293 blank line contains whitespace
+
+./launch/localisation_aruco_marker.py:38:13: E265 block comment should start with '# '
+
+./launch/localisation_aruco_marker.py:52:1: W293 blank line contains whitespace
+
+./launch/localisation_aruco_marker.py:55:13: E265 block comment should start with '# '
+
+./launch/localisation_aruco_marker.py:70:1: W293 blank line contains whitespace
+
+./launch/localisation_aruco_marker.py:73:13: E265 block comment should start with '# '
+
+./scripts/localisation_aruco_marker.py:3:1: I100 Import statements are in the wrong order. 'import cv2' should be before 'import numpy'
+
+./scripts/localisation_aruco_marker.py:5:13: E261 at least two spaces before inline comment
+
+./scripts/localisation_aruco_marker.py:8:1: I100 Import statements are in the wrong order. 'from geometry_msgs.msg import PoseStamped' should be before 'from tf_transformations import quaternion_from_matrix'
+
+./scripts/localisation_aruco_marker.py:10:1: I100 Import statements are in the wrong order. 'from cv_bridge import CvBridge' should be before 'from sensor_msgs.msg import Image'
+
+./scripts/localisation_aruco_marker.py:11:1: F401 'tf2_ros' imported but unused
+
+./scripts/localisation_aruco_marker.py:12:1: I101 Imported names are in the wrong order. Should be Buffer, TransformBroadcaster, TransformListener
+
+./scripts/localisation_aruco_marker.py:13:1: F811 redefinition of unused 'quaternion_from_matrix' from line 7
+
+./scripts/localisation_aruco_marker.py:17:24: W291 trailing whitespace
+
+./scripts/localisation_aruco_marker.py:18:24: W291 trailing whitespace
+
+./scripts/localisation_aruco_marker.py:19:14: W291 trailing whitespace
+
+./scripts/localisation_aruco_marker.py:24:1: E302 expected 2 blank lines, found 1
+
+./scripts/localisation_aruco_marker.py:25:1: CNL100 Class definition does not have a new line.
+
+./scripts/localisation_aruco_marker.py:30:1: W293 blank line contains whitespace
+
+./scripts/localisation_aruco_marker.py:34:1: W293 blank line contains whitespace
+
+./scripts/localisation_aruco_marker.py:38:1: W293 blank line contains whitespace
+
+./scripts/localisation_aruco_marker.py:43:66: Q000 Double quotes found but single quotes preferred
+
+./scripts/localisation_aruco_marker.py:44:16: F821 undefined name 'CvBridgeError'
+
+./scripts/localisation_aruco_marker.py:45:37: Q000 Double quotes found but single quotes preferred
+
+./scripts/localisation_aruco_marker.py:54:100: E501 line too long (113 > 99 characters)
+
+./scripts/localisation_aruco_marker.py:62:1: W293 blank line contains whitespace
+
+./scripts/localisation_aruco_marker.py:68:1: W293 blank line contains whitespace
+
+./scripts/localisation_aruco_marker.py:75:1: W293 blank line contains whitespace
+
+./scripts/localisation_aruco_marker.py:81:1: W293 blank line contains whitespace
+
+./scripts/localisation_aruco_marker.py:83:21: F821 undefined name 'geometry_msgs'
+
+./scripts/localisation_aruco_marker.py:85:37: Q000 Double quotes found but single quotes preferred
+
+./scripts/localisation_aruco_marker.py:86:36: Q000 Double quotes found but single quotes preferred
+
+./scripts/localisation_aruco_marker.py:95:1: W293 blank line contains whitespace
+
+./scripts/localisation_aruco_marker.py:98:100: E501 line too long (109 > 99 characters)
+
+./scripts/localisation_aruco_marker.py:99:100: E501 line too long (104 > 99 characters)
+
+./scripts/localisation_aruco_marker.py:100:1: W293 blank line contains whitespace
+
+./scripts/localisation_aruco_marker.py:103:48: Q000 Double quotes found but single quotes preferred
+
+./scripts/localisation_aruco_marker.py:109:1: W293 blank line contains whitespace
+
+./scripts/localisation_aruco_marker.py:112:49: Q000 Double quotes found but single quotes preferred
+
+./scripts/localisation_aruco_marker.py:120:44: Q000 Double quotes found but single quotes preferred
+
+./scripts/localisation_aruco_marker.py:121:1: W293 blank line contains whitespace
+
+./scripts/localisation_aruco_marker.py:128:1: E302 expected 2 blank lines, found 1
+
+./scripts/localisation_aruco_marker.py:141:1: E305 expected 2 blank lines after class or function definition, found 1
+
+./scripts/localisation_aruco_marker.py:143:1: W391 blank line at end of file
+
+
+4 files checked
+53 errors
+
+'C'-type errors: 1
+'E'-type errors: 17
+'F'-type errors: 4
+'I'-type errors: 4
+'Q'-type errors: 8
+'W'-type errors: 19
+
+Checked files:
+
+* ./launch/localisation_aruco_marker.py
+* ./scripts/localisation_aruco_marker.py
+* ./install/_local_setup_util_ps1.py
+* ./install/_local_setup_util_bat.py
+-- run_test.py: return code 1
+-- run_test.py: verify result file '/home/raspi11031808/Desktop/ros2_ws/build/localisation_aruco_marker/test_results/localisation_aruco_marker/flake8.xunit.xml'
+<end of output>
+Test time =   0.72 sec
+----------------------------------------------------------
+Test Failed.
+"flake8" end time: Mar 06 15:01 AEST
+"flake8" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/6 Testing: lint_cmake
+3/6 Test: lint_cmake
+Command: "/usr/bin/python3" "-u" "/opt/ros/rolling/share/ament_cmake_test/cmake/run_test.py" "/home/raspi11031808/Desktop/ros2_ws/build/localisation_aruco_marker/test_results/localisation_aruco_marker/lint_cmake.xunit.xml" "--package-name" "localisation_aruco_marker" "--output-file" "/home/raspi11031808/Desktop/ros2_ws/build/localisation_aruco_marker/ament_lint_cmake/lint_cmake.txt" "--command" "/opt/ros/rolling/bin/ament_lint_cmake" "--xunit-file" "/home/raspi11031808/Desktop/ros2_ws/build/localisation_aruco_marker/test_results/localisation_aruco_marker/lint_cmake.xunit.xml"
+Directory: /home/raspi11031808/Desktop/ros2_ws/src/ROS2-Localisation-System
+"lint_cmake" start time: Mar 06 15:01 AEST
+Output:
+----------------------------------------------------------
+-- run_test.py: invoking following command in '/home/raspi11031808/Desktop/ros2_ws/src/ROS2-Localisation-System':
+ - /opt/ros/rolling/bin/ament_lint_cmake --xunit-file /home/raspi11031808/Desktop/ros2_ws/build/localisation_aruco_marker/test_results/localisation_aruco_marker/lint_cmake.xunit.xml
+CMakeLists.txt:15: Lines should be <= 140 characters long [linelength]
+
+
+1 errors
+-- run_test.py: return code 1
+-- run_test.py: verify result file '/home/raspi11031808/Desktop/ros2_ws/build/localisation_aruco_marker/test_results/localisation_aruco_marker/lint_cmake.xunit.xml'
+<end of output>
+Test time =   0.25 sec
+----------------------------------------------------------
+Test Failed.
+"lint_cmake" end time: Mar 06 15:01 AEST
+"lint_cmake" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/6 Testing: pep257
+4/6 Test: pep257
+Command: "/usr/bin/python3" "-u" "/opt/ros/rolling/share/ament_cmake_test/cmake/run_test.py" "/home/raspi11031808/Desktop/ros2_ws/build/localisation_aruco_marker/test_results/localisation_aruco_marker/pep257.xunit.xml" "--package-name" "localisation_aruco_marker" "--output-file" "/home/raspi11031808/Desktop/ros2_ws/build/localisation_aruco_marker/ament_pep257/pep257.txt" "--command" "/opt/ros/rolling/bin/ament_pep257" "--xunit-file" "/home/raspi11031808/Desktop/ros2_ws/build/localisation_aruco_marker/test_results/localisation_aruco_marker/pep257.xunit.xml"
+Directory: /home/raspi11031808/Desktop/ros2_ws/src/ROS2-Localisation-System
+"pep257" start time: Mar 06 15:01 AEST
+Output:
+----------------------------------------------------------
+-- run_test.py: invoking following command in '/home/raspi11031808/Desktop/ros2_ws/src/ROS2-Localisation-System':
+ - /opt/ros/rolling/bin/ament_pep257 --xunit-file /home/raspi11031808/Desktop/ros2_ws/build/localisation_aruco_marker/test_results/localisation_aruco_marker/pep257.xunit.xml
+checking ./install/_local_setup_util_bat.py
+checking ./install/_local_setup_util_ps1.py
+checking ./launch/localisation_aruco_marker.py
+checking ./scripts/localisation_aruco_marker.py
+No problems found
+-- run_test.py: return code 0
+-- run_test.py: verify result file '/home/raspi11031808/Desktop/ros2_ws/build/localisation_aruco_marker/test_results/localisation_aruco_marker/pep257.xunit.xml'
+<end of output>
+Test time =   0.39 sec
+----------------------------------------------------------
+Test Passed.
+"pep257" end time: Mar 06 15:01 AEST
+"pep257" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/6 Testing: uncrustify
+5/6 Test: uncrustify
+Command: "/usr/bin/python3" "-u" "/opt/ros/rolling/share/ament_cmake_test/cmake/run_test.py" "/home/raspi11031808/Desktop/ros2_ws/build/localisation_aruco_marker/test_results/localisation_aruco_marker/uncrustify.xunit.xml" "--package-name" "localisation_aruco_marker" "--output-file" "/home/raspi11031808/Desktop/ros2_ws/build/localisation_aruco_marker/ament_uncrustify/uncrustify.txt" "--command" "/opt/ros/rolling/bin/ament_uncrustify" "--xunit-file" "/home/raspi11031808/Desktop/ros2_ws/build/localisation_aruco_marker/test_results/localisation_aruco_marker/uncrustify.xunit.xml"
+Directory: /home/raspi11031808/Desktop/ros2_ws/src/ROS2-Localisation-System
+"uncrustify" start time: Mar 06 15:01 AEST
+Output:
+----------------------------------------------------------
+-- run_test.py: invoking following command in '/home/raspi11031808/Desktop/ros2_ws/src/ROS2-Localisation-System':
+ - /opt/ros/rolling/bin/ament_uncrustify --xunit-file /home/raspi11031808/Desktop/ros2_ws/build/localisation_aruco_marker/test_results/localisation_aruco_marker/uncrustify.xunit.xml
+No code style divergence in file 'src/localisation_aruco_marker.cpp'
+
+No problems found
+-- run_test.py: return code 0
+-- run_test.py: verify result file '/home/raspi11031808/Desktop/ros2_ws/build/localisation_aruco_marker/test_results/localisation_aruco_marker/uncrustify.xunit.xml'
+<end of output>
+Test time =   0.35 sec
+----------------------------------------------------------
+Test Passed.
+"uncrustify" end time: Mar 06 15:01 AEST
+"uncrustify" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/6 Testing: xmllint
+6/6 Test: xmllint
+Command: "/usr/bin/python3" "-u" "/opt/ros/rolling/share/ament_cmake_test/cmake/run_test.py" "/home/raspi11031808/Desktop/ros2_ws/build/localisation_aruco_marker/test_results/localisation_aruco_marker/xmllint.xunit.xml" "--package-name" "localisation_aruco_marker" "--output-file" "/home/raspi11031808/Desktop/ros2_ws/build/localisation_aruco_marker/ament_xmllint/xmllint.txt" "--command" "/opt/ros/rolling/bin/ament_xmllint" "--xunit-file" "/home/raspi11031808/Desktop/ros2_ws/build/localisation_aruco_marker/test_results/localisation_aruco_marker/xmllint.xunit.xml"
+Directory: /home/raspi11031808/Desktop/ros2_ws/src/ROS2-Localisation-System
+"xmllint" start time: Mar 06 15:01 AEST
+Output:
+----------------------------------------------------------
+-- run_test.py: invoking following command in '/home/raspi11031808/Desktop/ros2_ws/src/ROS2-Localisation-System':
+ - /opt/ros/rolling/bin/ament_xmllint --xunit-file /home/raspi11031808/Desktop/ros2_ws/build/localisation_aruco_marker/test_results/localisation_aruco_marker/xmllint.xunit.xml
+File 'package.xml' is valid
+
+No problems found
+-- run_test.py: return code 0
+-- run_test.py: verify result file '/home/raspi11031808/Desktop/ros2_ws/build/localisation_aruco_marker/test_results/localisation_aruco_marker/xmllint.xunit.xml'
+<end of output>
+Test time =   1.27 sec
+----------------------------------------------------------
+Test Passed.
+"xmllint" end time: Mar 06 15:01 AEST
+"xmllint" time elapsed: 00:00:01
+----------------------------------------------------------
+
+End testing: Mar 06 15:01 AEST
+
+cppcheck =   0.32 sec*proc
+
+flake8 =   0.72 sec*proc
+
+lint_cmake =   0.25 sec*proc
+
+linter =   3.30 sec*proc
+
+pep257 =   0.39 sec*proc
+
+uncrustify =   0.35 sec*proc
+
+xmllint =   1.27 sec*proc
+
