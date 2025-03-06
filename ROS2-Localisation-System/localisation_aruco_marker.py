@@ -1,4 +1,18 @@
 #!/usr/bin/env python3
+
+'''
+-------------------------- LOCALISATION ARUCO MARKER SCRIPT --------------------------
+This python script initialises and runs ‘MarkerTrackingNode’, a ROS2 node that
+  detects an ARUCO marker in a camera feed and estimates its pose relative to the
+  camera. It then publishes this pose information to ROS2 topics and transforms it 
+  into a global reference frame.
+
+  
+REV 0 ....................................................................... 06/03/25
+- This is the version made by Alexander Allan, edited by Clayder Gonzalez for
+  integration with ROS2 environment.
+
+'''
 import cv2
 import cv2.aruco as aruco
 import numpy as np
