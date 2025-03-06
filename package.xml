@@ -5,9 +5,12 @@
   <version>0.0.0</version>
   <description>TODO: Configure for ROS2 implementation</description>
   <maintainer email="natalie.kehoe10@gmail.com">nataliekehoe</maintainer>
-  <license>TODO</license>
-
+  <license>Apache License 2.0</license>
+  
+  <!-- Specify tools needed to compile packages -->
   <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>ament_cmake_python</buildtool_depend>
+
 
   <!-- The *depend tags are used to specify dependencies -->
   <!-- Examples: -->
@@ -20,17 +23,27 @@
   <!-- Use test_depend for packages you need only for testing: -->
   <!-- <test_depend>ament_lint_auto</test_depend> -->
   <!-- <test_depend>ament_lint_common</test_depend> -->
-  <buildtool_depend>catkin</buildtool_depend>
-  <build_depend>roscpp</build_depend>
-  <build_depend>rospy</build_depend>
-  <build_depend>std_msgs</build_depend>
-  <build_export_depend>roscpp</build_export_depend>
-  <build_export_depend>rospy</build_export_depend>
-  <build_export_depend>std_msgs</build_export_depend>
-  <exec_depend>roscpp</exec_depend>
-  <exec_depend>rospy</exec_depend>
-  <exec_depend>std_msgs</exec_depend>
-  
+
+  <!-- Old ROS 1 packages - DO NOT USE!!! Only for example. -->
+  <!-- <buildtool_depend>catkin</buildtool_depend> -->
+  <!-- <build_depend>roscpp</build_depend> -->
+  <!-- <build_depend>rospy</build_depend> -->
+  <!-- <build_depend>std_msgs</build_depend> -->
+  <!-- <build_export_depend>roscpp</build_export_depend> -->
+  <!-- <build_export_depend>rospy</build_export_depend> -->
+  <!-- <build_export_depend>std_msgs</build_export_depend> -->
+  <!-- <exec_depend>roscpp</exec_depend> -->
+  <!-- <exec_depend>rospy</exec_depend> -->
+  <!-- <exec_depend>std_msgs</exec_depend> -->
+
+  <!-- ROS 2 Packages -->
+  <depend>rclpp</depend>
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend>
+
+  <!-- Dependencies for testing only -->
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
 
   <export>
     <!-- Other tools can request additional information be placed here -->

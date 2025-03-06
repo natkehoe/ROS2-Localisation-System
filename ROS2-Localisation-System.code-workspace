@@ -1,10 +1,12 @@
 {
 	"folders": [
 		{
-			"path": "."
+			"name": "ROS1-localisation_aruco_marker",
+			"path": "../../EGH400/ROS1 ROS2 comparison/ROS1-localisation_aruco_marker"
 		},
 		{
-			"path": "../../EGH400/ROS1 ROS2 comparison/ROS1-localisation_aruco_marker"
+			"name": "ROS2-Localisation-System",
+			"path": "."
 		}
 	],
 	"settings": {}
