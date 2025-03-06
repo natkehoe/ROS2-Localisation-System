@@ -37,7 +37,7 @@
   <!-- <exec_depend>std_msgs</exec_depend> -->
 
   <!-- ROS 2 Packages -->
-  <depend>rclpp</depend>
+  <depend>rclcpp</depend>
   <depend>rclpy</depend>
   <depend>std_msgs</depend>
 

@@ -19,8 +19,8 @@ find_package(ament_cmake REQUIRED) # loads 'ament_cmake' package - required for 
 # find_package(<dependency> REQUIRED)
 
 find_package(ament_cmake_python REQUIRED)
-find_package(roscpp REQUIRED)
-find_package(rospy REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(rclpy REQUIRED)
 find_package(std_msgs REQUIRED)
 
 # Define a CMake variable named dependencies, that lists all ROS2 packages and other dependencies 
@@ -67,7 +67,7 @@ ament_python_install_package(${PROJECT_NAME})
 # Add this section to install Python scripts
 install(
   PROGRAMS
-  ROS2-Localisation-System/localisation_aruco_marker.py
+  ROS2-Localisation-System/localisation_aruco_marker.py # point to python script location
   DESTINATION lib/${PROJECT_NAME}
 )
 
