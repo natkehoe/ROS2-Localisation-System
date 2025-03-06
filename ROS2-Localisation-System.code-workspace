@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../../EGH400/ROS1 ROS2 comparison/ROS1-localisation_aruco_marker"
 		}
 	],
 	"settings": {}
