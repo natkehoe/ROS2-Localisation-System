@@ -4,6 +4,25 @@ This is a copy of the ROS2 localisation system scripts handed over by Clayder - 
 
 ## Locations on computers
 LOCAL: C:\Users\nhkje\git\ROS2-Localisation-System
+Raspi: ~/ros2_ws/src/ROS2-Localisation-System
+
+## Building Environment
+Using `colcon build` tools:
+1. `cd ~/ros2_ws/`
+2. Source ROS2: `source /opt/ros/rolling/setup.bash`
+3. Source workspace setup script: `source install/setup.bash`
+4. Build package: `colcon build --packages-select localisation_aruco_marker`
+5. Source workspace script again: `source install/setup.bash`
+6. Run test: `colcon test --packages-select localisation_aruco_marker`
+
+
+## Running nodes
+### localisation_aruco_marker.cpp
+1. `cd ~/ros2_ws/`
+2. Source ROS2: `source /opt/ros/rolling/setup.bash`
+3. Source workspace setup script: `source install/setup.bash`
+4. Run .cpp script: `ros2 run localisation_aruco_marker localisation_aruco_marker`
+
 
 ## Current tree:
 
