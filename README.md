@@ -53,6 +53,18 @@ This launches the static transformation nodes, defining the global positions and
 1. `cd ~/ros2_ws/`
 2. Source ROS2: `source /opt/ros/rolling/setup.bash`
 3. Source workspace setup script: `source install/setup.bash`
+4. Go to launch file: `cd ~/ros2_ws/src/ROS2-Localisation-System/launch`
+5. Launch node file: `ros2 launch localisation_aruco_marker_launch.py`
+
+## Testing the script
+The current plan is to firstly recreate the first experiment within 
+the ROS2 environment. Then, work can be done to improving the system.
+
+### Running the rosbag
+1. `cd ~/ros2_ws/bag_files/ros2_bag_dir`
+2. Source ROS2: `source /opt/ros/rolling/setup.bash`
+3. Run rosbag: 
+
 
 #### NOTES
 [STILL DEBUGGING]
