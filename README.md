@@ -16,6 +16,23 @@ Using `colcon build` tools:
 6. Run test: `colcon test --packages-select localisation_aruco_marker`
 
 
+<!-- !! WAS ABLE TO RUN WITHOUT ANY LAUNCH DEPENDENCIES !! -->
+<!-- ## Setup `package.xml` -->
+<!-- NOTE - 'package.xml' must be checked whenever converting between ROS2 versions, as the launch dependency -->
+<!-- names change due to updates over time. -->
+<!--  -->
+<!-- ### `package.xml` in ROLLING -->
+<!-- ``` -->
+  <!-- <exec_depend>launch</exec_depend> -->
+  <!-- <exec_depend>launch_ros</exec_depend> -->
+<!-- ``` -->
+<!--  -->
+<!-- ### `package.xml` in FOXY -->
+<!-- ``` -->
+<!-- <exec_depend>ros2launch</exec_depend> -->
+<!-- ``` -->
+
+
 ## Running nodes
 ### localisation_aruco_marker.cpp
 1. `cd ~/ros2_ws/`
@@ -23,62 +40,21 @@ Using `colcon build` tools:
 3. Source workspace setup script: `source install/setup.bash`
 4. Run .cpp script: `ros2 run localisation_aruco_marker localisation_aruco_marker`
 
+### localisation_aruco_marker.py
+This runs the MarkingTrackerNode() script, to determine the position of the aruco marker.
+1. `cd ~/ros2_ws/`
+2. Source ROS2: `source /opt/ros/rolling/setup.bash`
+3. Source workspace setup script: `source install/setup.bash`
+4. Run the node: `ros2 run localisation_aruco_marker localisation_aruco_marker.py`
 
-## Current tree:
+### localisation_aruco_marker_launch.py
+This launches the static transformation nodes, defining the global positions and transforms required to localise the rover centrepoint.
+1. `cd ~/ros2_ws/`
+2. Source ROS2: `source /opt/ros/rolling/setup.bash`
+3. Source workspace setup script: `source install/setup.bash`
 
-```
-C:.
-│   CMakeLists.txt
-│   LICENSE
-│   package.xml
-│   README.md
-│
-├───build
-│   │   .built_by
-│   │   COLCON_IGNORE
-│   │
-│   └───localisation_aruco_marker
-│           cmake_args.last
-│           colcon_build.rc
-│           colcon_command_prefix_build.bat
-│           colcon_command_prefix_build.bat.env
-│
-├───include
-│   └───localisation_aruco_marker
-├───install
-│       .colcon_install_layout
-│       COLCON_IGNORE
-│       local_setup.bat
-│       local_setup.ps1
-│       setup.bat
-│       setup.ps1
-│       _local_setup_util_bat.py
-│       _local_setup_util_ps1.py
-│
-├───launch
-│   │   =0.9.11
-│   │   localisation_aruco_marker.py
-│   │
-│   └───__pycache__
-│           localisation_aruco_marker.cpython-312.pyc
-│
-├───log
-│   │   COLCON_IGNORE
-│   │
-│   └───build_2025-02-19_12-42-31
-│       │   events.log
-│       │   logger_all.log
-│       │
-│       └───localisation_aruco_marker
-│               command.log
-│               stderr.log
-│               stdout.log
-│               stdout_stderr.log
-│               streams.log
-│
-├───scripts
-│       localisation_aruco_marker.py
-│
-└───src
-        localisation_aruco_marker.cpp
-```
+#### NOTES
+[STILL DEBUGGING]
+- Should follow the structure: ``ros2 launch <package_name> <launch_file_name>``
+- Need to add an `exec_depend` dependency inside `package.xml`
+

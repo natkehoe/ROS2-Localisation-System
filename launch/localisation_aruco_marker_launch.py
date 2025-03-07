@@ -2,6 +2,9 @@ from launch import LaunchDescription
 from launch_ros.actions import Node
 
 '''
+--- LAUNCH FILE ---
+https://docs.ros.org/en/foxy/Tutorials/Intermediate/Launch/Creating-Launch-Files.html
+
 This launch file is used to broadcast the static transform between the world frame and the checkerboard_marker frame,
 the checkerboard_marker frame and the checkerboard frame, the checkerboard frame and the camera frame, and the marker_frame
 frame and the base_link frame. 
