@@ -53,6 +53,12 @@ install(
   DESTINATION include
 )
 
+# Install launch files
+install(
+  DIRECTORY launch
+  DESTINATION share/${PROJECT_NAME}
+)
+
 # Install cpp executables
 #install(
 #  TARGETS
