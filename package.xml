@@ -40,7 +40,8 @@
   <depend>rclcpp</depend>
   <depend>rclpy</depend>
   <depend>std_msgs</depend>
-  <exec_depend>geometry_msgs</exec_depend>
+  <!-- <exec_depend>geometry_msgs</exec_depend> -->
+  <depend>geometry_msgs</depend>
 
 
   <!-- LAUNCH DEPENDENCIES -->

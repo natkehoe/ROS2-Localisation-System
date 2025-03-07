@@ -61,9 +61,11 @@ The current plan is to firstly recreate the first experiment within
 the ROS2 environment. Then, work can be done to improving the system.
 
 ### Running the rosbag
-1. `cd ~/ros2_ws/bag_files/ros2_bag_dir`
+1. `cd ~/ros2_ws/`
 2. Source ROS2: `source /opt/ros/rolling/setup.bash`
-3. Run rosbag: 
+3. Source workspace setup script: `source install/setup.bash`
+4. `cd ~/ros2_ws/bag_files/ros2_bag_dir`
+5. Run rosbag: `ros2 bag play <bagname>`
 
 
 #### NOTES

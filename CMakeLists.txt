@@ -22,6 +22,7 @@ find_package(ament_cmake_python REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(rclpy REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
 
 # Define a CMake variable named dependencies, that lists all ROS2 packages and other dependencies 
 #   the project requires
