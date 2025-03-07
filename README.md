@@ -23,6 +23,24 @@ Using `colcon build` tools:
 3. Source workspace setup script: `source install/setup.bash`
 4. Run .cpp script: `ros2 run localisation_aruco_marker localisation_aruco_marker`
 
+### localisation_aruco_marker.py
+This runs the MarkingTrackerNode() script, to determine the position of the aruco marker.
+1. `cd ~/ros2_ws/`
+2. Source ROS2: `source /opt/ros/rolling/setup.bash`
+3. Source workspace setup script: `source install/setup.bash`
+4. Run the node: `ros2 run localisation_aruco_marker localisation_aruco_marker.py`
+
+### localisation_aruco_marker_launch.py
+This launches the static transformation nodes, defining the global positions and transforms required to localise the rover centrepoint.
+1. `cd ~/ros2_ws/`
+2. Source ROS2: `source /opt/ros/rolling/setup.bash`
+3. Source workspace setup script: `source install/setup.bash`
+
+#### NOTES
+[STILL DEBUGGING]
+- Should follow the structure: ``ros2 launch <package_name> <launch_file_name>``
+- Need to add an `exec_depend` dependency inside `package.xml`
+
 
 ## Current tree:
 

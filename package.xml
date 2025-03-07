@@ -40,6 +40,8 @@
   <depend>rclcpp</depend>
   <depend>rclpy</depend>
   <depend>std_msgs</depend>
+  <!-- Required for launch files... -->
+  <exec_depend>ros2launch</exec_depend>
 
   <!-- Dependencies for testing only -->
   <test_depend>ament_lint_auto</test_depend>
