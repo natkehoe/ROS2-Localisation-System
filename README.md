@@ -15,14 +15,22 @@ Using `colcon build` tools:
 5. Source workspace script again: `source install/setup.bash`
 6. Run test: `colcon test --packages-select localisation_aruco_marker`
 
-## Setup `package.xml`
-NOTE - 'package.xml' must be checked whenever converting between ROS2 versions, as the launch dependency
-names change due to updates over time.
 
-### `package.xml` in ROLLING
-```
-
-```
+<!-- !! WAS ABLE TO RUN WITHOUT ANY LAUNCH DEPENDENCIES !! -->
+<!-- ## Setup `package.xml` -->
+<!-- NOTE - 'package.xml' must be checked whenever converting between ROS2 versions, as the launch dependency -->
+<!-- names change due to updates over time. -->
+<!--  -->
+<!-- ### `package.xml` in ROLLING -->
+<!-- ``` -->
+  <!-- <exec_depend>launch</exec_depend> -->
+  <!-- <exec_depend>launch_ros</exec_depend> -->
+<!-- ``` -->
+<!--  -->
+<!-- ### `package.xml` in FOXY -->
+<!-- ``` -->
+<!-- <exec_depend>ros2launch</exec_depend> -->
+<!-- ``` -->
 
 
 ## Running nodes
