@@ -87,5 +87,19 @@ def generate_launch_description():
                 'marker_frame',
                 'base_link'
             ]
+        ),
+        
+        Node(
+            package='localisation_aruco_marker',
+            #namespace='turtlesim1',
+            executable='localisation_aruco_marker.py',
+            name='localisation_aruco_marker'
+        ),
+        
+        Node(
+            package='localisation_aruco_marker',
+            #namespace='turtlesim1',
+            executable='pose_publisher.py',
+            name='pose_publisher'
         )
     ])

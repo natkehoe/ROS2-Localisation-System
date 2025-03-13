@@ -44,14 +44,14 @@ class MarkerTrackingNode(Node):
         self.bridge = CvBridge()
 
         self.create_subscription(Image, '/camera/color/image_raw', self.image_callback, 10)
-        self.marker_pose_pub = self.create_publisher(PoseStamped, '/rover_centre', 10)
-        self.marker_pose_pub2 = self.create_publisher(PoseStamped, '/camera2base_link', 10)
+        #self.marker_pose_pub = self.create_publisher(PoseStamped, '/rover_centre', 10)
+        #self.marker_pose_pub2 = self.create_publisher(PoseStamped, '/camera2base_link', 10)
 
-        self.tf_buffer = Buffer()
+        #self.tf_buffer = Buffer()
         self.br = TransformBroadcaster(self)
-        self.tf_listener = TransformListener(self.tf_buffer, self)
+        #self.tf_listener = TransformListener(self.tf_buffer, self)
 
-        self.timer = self.create_timer(1/30, self.main_loop)
+        self.timer = self.create_timer(1/100, self.main_loop)
 
     def image_callback(self, data):
         try:
@@ -84,6 +84,7 @@ class MarkerTrackingNode(Node):
         if ids is not None:
             detected_ids = ids.flatten()
             if 5 in detected_ids:
+
                 i = np.where(detected_ids == 5)[0][0]
                 marker_size = marker_sizes[5]
                 rvecs, tvecs = self.estimate_pose(corners[i], marker_size)
@@ -95,7 +96,7 @@ class MarkerTrackingNode(Node):
                 x, y, z = tvecs[0].flatten()
                 
                 # Publish Transform
-                t = geometry_msgs.msg.TransformStamped()
+                t = TransformStamped()
                 t.header.stamp = self.get_clock().now().to_msg()
                 t.header.frame_id = "camera"
                 t.child_frame_id = "marker_frame"
@@ -108,10 +109,16 @@ class MarkerTrackingNode(Node):
                 t.transform.rotation.w = q[3]
                 self.br.sendTransform(t)
 
+                #print('hello')
+
+                '''
                 # Publish Pose
                 try:
-                    transform_dot = self.tf_buffer.lookup_transform('camera', 'base_link', rclpy.time.Time())
-                    transform = self.tf_buffer.lookup_transform('world', 'base_link', rclpy.time.Time())
+                    #transform_dot = self.tf_buffer.lookup_transform('camera', 'base_link', rclpy.time.Time()) # no timeout; waits until a valid transform is available or lookup fails
+                    #transform = self.tf_buffer.lookup_transform('world', 'base_link', rclpy.time.Time())
+
+                    transform_dot = self.tf_buffer.lookup_transform('camera', 'base_link', rclpy.time.Time(), timeout=rclpy.duration.Duration(seconds=0.0)) # function is non-blockin; immediately returns if no valid transform is available at the requested time
+                    transform = self.tf_buffer.lookup_transform('world', 'base_link', rclpy.time.Time(), timeout=rclpy.duration.Duration(seconds=0.0))
 
                     pose_msg = PoseStamped()
                     pose_msg.header.stamp = self.get_clock().now().to_msg()
@@ -121,7 +128,9 @@ class MarkerTrackingNode(Node):
                     pose_msg.pose.position.z = transform.transform.translation.z
                     pose_msg.pose.orientation = transform.transform.rotation
                     self.marker_pose_pub.publish(pose_msg)
-                    
+
+                    print(pose_msg.pose.position.x, ',', pose_msg.pose.position.y, ',', pose_msg.pose.position.z)
+                     
                     pose_msg2 = PoseStamped()
                     pose_msg2.header.stamp = self.get_clock().now().to_msg()
                     pose_msg2.header.frame_id = "camera"
@@ -133,6 +142,7 @@ class MarkerTrackingNode(Node):
 
                 except Exception as e:
                     self.get_logger().warn(f"Transform error: {e}")
+                '''
         
         cv2.imshow('Frame with Pose Estimation', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):

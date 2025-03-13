@@ -75,6 +75,7 @@ ament_python_install_package(${PROJECT_NAME})
 install(
   PROGRAMS
   localisation_aruco_marker/localisation_aruco_marker.py # point to python script location
+  localisation_aruco_marker/pose_publisher.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
