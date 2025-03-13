@@ -77,14 +77,14 @@ def generate_launch_description():
             executable='static_transform_publisher',
             name='robot_tf_broadcaster',
             arguments=[
-                '-0.194'
-                '0'
-                '0.01'
-                '0'
-                '0'
-                '0'
-                '1'
-                'marker_frame'
+                '-0.194',
+                '0',
+                '0.01',
+                '0',
+                '0',
+                '0',
+                '1',
+                'marker_frame',
                 'base_link'
             ]
         )
