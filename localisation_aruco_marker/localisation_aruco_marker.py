@@ -43,22 +43,26 @@ class MarkerTrackingNode(Node):
         self.rover_position = None
         self.bridge = CvBridge()
 
+        # GET IMAGE
         self.create_subscription(Image, '/camera/color/image_raw', self.image_callback, 10)
         #self.marker_pose_pub = self.create_publisher(PoseStamped, '/rover_centre', 10)
         #self.marker_pose_pub2 = self.create_publisher(PoseStamped, '/camera2base_link', 10)
 
+        # SETUP BROADCASTING FOR MARKERTRACKINGNODE
         #self.tf_buffer = Buffer()
         self.br = TransformBroadcaster(self)
         #self.tf_listener = TransformListener(self.tf_buffer, self)
 
         self.timer = self.create_timer(1/100, self.main_loop)
 
+    # CONVERT IMAGE MESSAGE TO CV2
     def image_callback(self, data):
         try:
             self.video_capture = self.bridge.imgmsg_to_cv2(data, 'bgr8')
         except CvBridgeError as e:
             self.get_logger().error(f"Image conversion error: {e}")
 
+    # ESTIMATE ROVER POSE - ARUCOMARKER2CAMERA
     def estimate_pose(self, corners, marker_size):
         marker_points = np.array([[-marker_size / 2, marker_size / 2, 0],
                                   [marker_size / 2, marker_size / 2, 0],
@@ -71,24 +75,29 @@ class MarkerTrackingNode(Node):
             tvecs.append(t)
         return rvecs, tvecs
 
+
     def main_loop(self):
+        # CHECK IF VIDEO CAPTURE
         if self.video_capture is None:
             return
-        
+
+        # GET CAPTURE AND CONVERT TO CV2 IMAGE
         frame = self.video_capture
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         dictionary = aruco.getPredefinedDictionary(aruco.DICT_6X6_250)
         parameters = aruco.DetectorParameters_create()
         corners, ids, _ = aruco.detectMarkers(gray, dictionary, parameters=parameters)
-        
+
+        # IF ARUCO MARKER DETECTED
         if ids is not None:
             detected_ids = ids.flatten()
             if 5 in detected_ids:
 
+                # DETECT ID 5 AND ESTIMATE ITS POSE
                 i = np.where(detected_ids == 5)[0][0]
                 marker_size = marker_sizes[5]
                 rvecs, tvecs = self.estimate_pose(corners[i], marker_size)
-                
+
                 # Transformation matrix and quaternion
                 R, _ = cv2.Rodrigues(rvecs[0])
                 R = np.vstack([np.hstack([R, np.array([[0], [0], [0]])]), [0, 0, 0, 1]])
@@ -96,6 +105,7 @@ class MarkerTrackingNode(Node):
                 x, y, z = tvecs[0].flatten()
                 
                 # Publish Transform
+                # ARUCOMARKER2CAMERA IN TF2 FORMAT
                 t = TransformStamped()
                 t.header.stamp = self.get_clock().now().to_msg()
                 t.header.frame_id = "camera"
@@ -108,6 +118,8 @@ class MarkerTrackingNode(Node):
                 t.transform.rotation.z = q[2]
                 t.transform.rotation.w = q[3]
                 self.br.sendTransform(t)
+
+              # ... PUBLISHES 't' TO MarkerTrackingNode().
 
                 #print('hello')
 
