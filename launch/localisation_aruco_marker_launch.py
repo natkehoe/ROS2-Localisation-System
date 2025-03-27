@@ -45,9 +45,9 @@ def generate_launch_description():
                 '0',
                 '-0.014',
                 '0',
-                '0',
-                '-1.57079633',
-                '1.57079633',
+                '0', # roll
+                '-1.57079633', # pitch
+                '1.57079633', # yaw
                 'checkerboard_marker',       # frame_id
                 'checkerboard'  # child_frame_id
             ]
